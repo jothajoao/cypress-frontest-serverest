@@ -16,29 +16,29 @@ describe('Login de usuarios', () => {
     ];
 
 
-    //    it('Login realizado com sucesso', () => {
-    //        for (let index = 0; index < logins.length; index++) {
-    //            const login = logins[index];
-    //            cy.visit(Cypress.env('baseUrl'));
-    //            cy.get("h1").should('have.text', 'Login');
-    //            if (login.admin) {
-    //                cy.get('[data-testid="email"]').type(login.LoginAdmin);
-    //                cy.get('[data-testid="senha"]').type(login.SenhaAdmin);
-    //            } else {
-    //                cy.get('[data-testid="email"]').type(login.Login);
-    //                cy.get('[data-testid="senha"]').type(login.Senha);
-    //
-    //            }
-    //            cy.get('[data-testid="entrar"]').click();
-    //            cy.wait(1000);
-    //
-    //            if (login.admin) {
-    //                cy.get("h1").should('have.text', 'Bem Vindo  ' + login.nome);
-    //            } else {
-    //                cy.get("h1").should('have.text', 'Serverest Store');
-    //            }
-    //        }
-    //    });
+    it('Login realizado com sucesso', () => {
+        for (let index = 0; index < logins.length; index++) {
+            const login = logins[index];
+            cy.visit(Cypress.env('baseUrl'));
+            cy.get("h1").should('have.text', 'Login');
+            if (login.admin) {
+                cy.get('[data-testid="email"]').type(login.LoginAdmin);
+                cy.get('[data-testid="senha"]').type(login.SenhaAdmin);
+            } else {
+                cy.get('[data-testid="email"]').type(login.Login);
+                cy.get('[data-testid="senha"]').type(login.Senha);
+
+            }
+            cy.get('[data-testid="entrar"]').click();
+            cy.wait(1000);
+
+            if (login.admin) {
+                cy.get("h1").should('have.text', 'Bem Vindo  ' + login.nome);
+            } else {
+                cy.get("h1").should('have.text', 'Serverest Store');
+            }
+        }
+    });
 
 
     it('Login invalido', () => {
