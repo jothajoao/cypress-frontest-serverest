@@ -15,5 +15,9 @@ module.exports = defineConfig({
     SenhaCadastrada: "teste123",
     LoginInvalido: "jotha.joao@teste",
     LoginNome: "jotha.joao@gmail.com.br",
+    LoginAdmin: "teste@teste.com.br",
+    SenhaAdmin: "teste123",
+    Login: "jotha1@teste.com.br",
+    Senha: "teste123"
   },
 });
